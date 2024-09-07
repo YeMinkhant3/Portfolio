@@ -1,0 +1,324 @@
+/* COMMON STYLE */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bgColor : #f0f9ff;
+    --mainColor : darkblue  ;
+}
+body {
+    background-color: var(--bgColor);
+}
+
+#hero, 
+#about, #mySkills, 
+#services, 
+#contact, 
+#footer {
+    
+    padding: 30px 0;
+    /* border: 1px solid red; */
+}
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 25px;
+}
+
+/* HERO STYLE */
+#hero .container {
+    display: flex;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--mainColor);
+    border-radius: 10px;
+    overflow: hidden;
+    color: #f0f9ff;
+    border:5px solid white ;
+
+}
+#hero .container .content { 
+    flex-basis: 60%;
+
+}
+#hero .container .img-div {
+        flex-basis: 40%;
+        height: 100%;
+}
+#hero .container .img-div img {
+    width:100%;
+    height: 100%;
+    object-fit :cover;
+    object-position: 20% 1%;
+}
+#hero .container .content h3 , h1 , p {
+    margin-bottom: 20px;
+}
+#hero .container .content .social-icons {
+    display: flex;
+    justify-content: center ;
+    gap: 10px;
+}
+
+/* ABOUT STYLE */
+
+
+#about .container{
+    display: flex;
+    gap: 15px;
+}
+
+#about .container>div {
+    flex-basis: 50%;
+}
+
+#about .container .img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .container .img-div img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 3px 3px 10px gray;
+}
+
+#about .container .content {
+
+}
+
+/* MYSKILLS STYLE  */
+#mySkills .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+#mySkills .container > div {
+   flex-basis: 50%;
+}
+
+#mySkills .container .img-div img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+
+#mySkills .container .content .skill-lists {
+    list-style-type: none;
+    margin-bottom: 30px;
+    
+}
+
+#mySkills .container .content .skill-lists .skill-items {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    padding: 15px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: bold;
+    
+}
+/* SERVICES STYLE  */
+#services .container {
+   display: flex;
+   gap: 30px;
+}
+
+#services .container>div {
+    
+    flex-basis: 33.33%;
+}
+
+#services .container .card-wrapper .card {
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--mainColor);
+    color: var(--bgColor);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+#services .container .card-wrapper .card:hover {
+    transform: scale(1.1);
+}
+
+#services .container .card-wrapper .card svg, h3, p {
+     margin-bottom: 15px;
+}
+
+/* CONTACT STYLE  */
+#content .container {
+     display: flex;
+}
+
+#content .container > div {
+    flex-basis: 50%;
+}
+
+#content .container .content .content-list {
+     list-style-type:none;
+}
+
+#content .container .content .content-list .content-list-items {
+    margin: 15px 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#content .container .form-content .input-wrapper {
+      margin-bottom:15px ;  
+}
+
+#content .input{
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 100%;
+}
+
+#content .container .form-content .input-wrapper:first-child {
+    display: flex;
+    gap: 10px;
+}
+#content .btn {
+    border: none;
+    background-color: var(--mainColor);
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: #f0f9ff;
+}
+/* FOOTER STYLE  */
+
+#footer {
+    background-color: var(--mainColor);
+    color: var(--bgColor);
+    padding: 60px 0;
+
+}
+#footer .container {
+    display: flex;
+    gap: 5px;
+}
+
+#footer .container > div {
+    flex-basis: 33.33%;
+    text-align: center;
+    font-weight: bold;
+}
+
+#footer .link-list {
+    list-style-type: none;
+}
+
+#footer .link-list .link-list-items {
+    margin-bottom: 15px;
+    
+}
+
+#footer .link-list .link-list-items a {
+    text-decoration: none;
+    color:var(--bgColor);
+}
+
+#footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Responsive Design */
+/* medium size */
+@media all and (max-width:1023px) {
+    .container{
+        width: 80%;
+    }
+}
+
+@media all and (max-width:1800px) {
+    .container{
+        width: 80%;
+    }
+}
+
+/* small size */
+@media all and (max-width:767px) {
+    #hero .container {
+       flex-direction: column;
+       height: 95vh;
+    }
+
+    #hero .container .content { 
+        width: 100%;
+        order: 2;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center; */
+    }
+    
+    #hero .container .img-div {
+        width: 100%;
+        /* height: 350px; */
+        order: 1;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    #hero .container .img-div img {
+        width:100%;
+        height: 70%;
+    }
+
+    /* About */
+    #about .container {
+        padding: 0 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Skills */
+    #mySkills .container {
+        flex-direction: column;
+    }
+
+    /* service */
+
+    #services .container {
+        padding: 0 15px;
+        flex-direction: column;
+        gap: 5px;
+     } 
+
+    /* contact */
+    #content .container {
+        padding: 0 15px;
+        flex-direction: column;
+   }
+
+   /* footer */
+   #footer .container {
+    flex-direction: column;
+    gap: 30px;
+}
+
+}
