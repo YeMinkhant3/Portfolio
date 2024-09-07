@@ -298,6 +298,7 @@ body {
 
     /* Skills */
     #mySkills .container {
+        padding: 0 15px;
         flex-direction: column;
     }
 
